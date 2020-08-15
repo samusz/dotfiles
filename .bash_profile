@@ -47,4 +47,5 @@ fi;
 complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
+# not sure what this does ~~~samusz
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
