@@ -2,13 +2,20 @@
 started with a fork of [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
 
 # **TL;DR** too long ; didn't read
+
 _In the event you don't want to take the time to read this 100ish lines long README of this file here's the gist of it:_
-** I have reviewed theses files: you should do the same ** 
-** following text kept as original file **
+
+
+### - 1. I have reviewed theses files for me, myself and I. 
+
+_You should do the same_
+
+### - 2. Following text kept as original file **
 
 ![Screenshot of my shell prompt](https://i.imgur.com/EkEtphC.png)
 
 ## Installation
+
 **TL;DR** ** I have reviewed theses files: you should do the same ** 
 
 **Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
