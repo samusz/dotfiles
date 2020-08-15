@@ -1,7 +1,8 @@
 # Samusz's dotfile 
 started with a fork of [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
 
-# **TL;DR** 
+# **TL;DR** too long ; didn't read
+_In the event you don't want to take the time to read this 100ish lines long README of this file here's the gist of it:_
 ** I have reviewed theses files: you should do the same ** 
 ** following text kept as original file **
 
