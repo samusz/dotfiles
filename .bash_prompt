@@ -102,6 +102,7 @@ else
 fi;
 
 # Set the terminal title and prompt.
+# A great and informative prompt at last !
 PS1="\[\033]0;\W\007\]"; # working directory base name
 PS1+="\[${bold}\]\n"; # newline
 PS1+="\[${userStyle}\]\u"; # username
