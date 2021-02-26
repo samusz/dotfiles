@@ -97,11 +97,17 @@ brew install tree
 brew install vbindiff
 brew install zopfli
 brew install ripgrep
+brew install pandoc
+brew install hugo
 
 # install git and github related CLI utility
 brew install git
 brew install git-lfs
 brew install github/gh/gh
 
+
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# Passwords management with pass qt interface. 
+brew cask install qtpass
