@@ -1,6 +1,6 @@
 This is my dotfile repo 
 
-Created with tuckr 
+Created with tuckr  https://github.com/RaphGL/Tuckr
 
 To add a new config file directory :
 
