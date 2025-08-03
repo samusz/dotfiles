@@ -323,3 +323,147 @@ emacs &
 exit
 cd 
 fish
+asdf current
+asdf python list 
+asdf list python 
+asdf list python --all
+asdf list
+asdf
+asdf list help
+asdf help list
+asdf plugin update --all
+asdf list all python 
+asdf install python 3.13.5
+echo $SHELL
+nvim ~/.bashrc 
+asdf completion bash
+asdf reshim python
+nvim ~/.bashrc 
+asdf remove python 
+asdf reshim  python 3.13.5
+python 
+nvim ~/.tool-versions 
+python 
+fish 
+cd repos/tools/
+ls
+cd stow/
+ls
+./configure 
+fish
+to 
+fish
+doom 
+cd 
+cd .config/emacs/
+ls
+cd bin/
+ls
+./doom
+doom 
+./doom doctor
+sudo apt install shellcheck
+./doom doctor
+cd 
+cd repos/tools/
+getnf
+./doom doctor
+cd -
+cd ..
+cd 
+cd .config/doom/bin
+cd .config/emacs/bin/
+./doom doctor
+cd 
+cd .emacs.d/
+ls
+cd bin/
+ls
+cd ..
+ls -al .emacs.d/
+ls -al .config/emacs/
+doom
+ls -al .config/
+cd -
+cd .config/doom/
+ls
+globalprotect 
+ls
+doom 
+fish
+exit
+fish
+ls
+cd 
+mkdir code
+cd code 
+iex
+asdf add plugin erlang 
+asdf plugin add erlang 
+asdf plugin add elixir
+asdf install erlang latest
+doom sync
+cd
+fish
+elvish 
+fish
+exit
+ls
+tuckr 
+nvim .bashrc 
+asdf
+nvim .bashrc 
+exit
+asdf
+exit
+asdf
+exit
+ls
+fish
+exit
+asdf
+nvim 
+ls
+nvim .tmux.conf 
+exit
+bash
+exit
+fish
+echo $HOSTNAME 
+cd ..
+cd 
+doom sync
+exit
+tuckr
+tuckr pull tmux .tmux.conf 
+tuckr push tmux .tmux.conf 
+tuckr add tmux
+tuckr diff tmux
+tuckr add -d tmux
+tuckr add -h
+tuckr add -a tmux
+doom 
+exit
+bash
+exit
+adsf
+asdf
+nvim 
+nvim .bashrc 
+asdf
+tmux
+doom 
+exit
+fish
+exit
+asdf
+xit
+exit
+asdf
+tmux
+man tmux 
+ls
+doom sync
+exit
+fish
+fish 
