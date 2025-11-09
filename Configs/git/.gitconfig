@@ -5,3 +5,26 @@
 	email = sacha.muszlak@inrae.fr
 [init]
 	defaultBranch = main
+[core]
+	editor = nvim
+; [diff]
+; 	external = meld
+; 	tool = meld
+[difftool "meld"]
+	path = /usr/bin/meld
+[difftool]
+	prompt = false
+[merge]
+	tool = meld
+[mergetool "meld"]
+	path = /usr/bin/meld
+[mergetool]
+	prompt = false
+[alias]
+	meld = !git difftool -t meld --dir-diff
+	logp = !git log --pretty=oneline --abbrev-commit
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

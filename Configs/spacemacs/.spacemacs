@@ -32,20 +32,106 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(toml
-     javascript
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
-     ;; `M-m f e R' (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
-     amx
+   '(html
+     ;; --- Base & UX ---
+     helpful
+     emoji
+     amx ;; check what that does
+     helm
+     (auto-completion :variables
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-enable-help-tooltip t
+                      auto-completion-enable-sort-by-usage t)
      auto-completion
-     bibtex
-     better-defaults
-     command-log
-     clojure
+     multiple-cursors
+     (spell-checking :variables
+                     spell-checking-enable-by-default t
+                     spell-checking-enable-auto-dictionary t)
+     languagetool
+     syntax-checking
+     (lsp :variables
+          lsp-idle-delay 0.3
+          lsp-lens-enable t
+          lsp-headerline-breadcrumb-enable t)
+     dap
+     treemacs
+     (git :variables
+          git-enable-magit-delta-plugin t
+          git-enable-magit-forge t
+          git-enable-magit-todos-plugin t)   ;; Forge + TODOs dans Magit
+     version-control
+     undo-tree                      ;; Undo/redo visuels + persistant
      debug
+
+     ;; --- Données / fichiers plats ---
+     csv
+     (json :variables json-fmt-tool 'prettier)
+     (yaml :variables yaml-enable-lsp t)
+     sql
+     toml
+
+     ;; --- Python & Notebook ---
+     (python :variables
+             python-backend 'lsp
+             python-lsp-server 'pyright
+             python-formatter 'black
+             python-format-on-save t
+             python-test-runner 'pytest
+             python-fill-column 88)
+     conda
+     jupyter
+
+     ;; --- R / ESS ---
+     (ess :variables
+          ess-R-backend 'lsp
+          ess-use-flymake nil
+          ess-enable-smart-equals t)
+
+     ;; --- LaTeX & PDF ---
+     (latex :variables
+            latex-backend 'lsp
+            latex-enable-auto-fill t
+            latex-enable-reftex t
+            latex-build-command "LatexMk"
+            TeX-command-default "LatexMk")
+
+     ;; Bibliographies + PDF
+     (bibtex :variables
+             bibtex-completion-bibliography '("~/bib/references.bib")
+             bibtex-completion-library-path '("~/Zotero/storage" "~/Papers")
+             bibtex-completion-notes-path "~/bib/notes.org"
+             bibtex-completion-pdf-field "file")
+     pdf
+     ess
+     ;; --- Docs techniques ---
+     (markdown :variables
+               markdown-live-preview-engine 'pandoc
+               markdown-command "pandoc")
+     (org :variables
+          org-want-todo-bindings t
+          org-enable-notifications t
+          org-start-notification-daemon-on-startup t
+          org-enable-org-journal-support t
+          org-todo-dependencies-strategy 'naive-auto)
+
+     ;; --- Outils annexes ---
+     docker
+
+     ;; --- Other languages ---
+     clojure
+     elixir
+     emacs-lisp
+     erlang
+     javascript
+     (julia :variables julia-backend 'lsp)
+     (rust :variables
+           rust-backend 'lsp
+           rust-lsp-server 'rust-analyzer
+           rust-format-on-save t)
+
+
+     ;; --- Other tools ---
+     command-log
      (erc :variables
           erc-enable-notifications t
           erc-enable-sasl-auth t
@@ -54,12 +140,7 @@ This function should only modify configuration layer settings."
              :port "6697"
              :ssl t
              :nick "samusz")))
-     emacs-lisp
-     emoji
-     erc
-     ess
-     elixir
-     erlang
+     (evil-snipe :variables evil-snipe-enable-alternate-f-and-t-behaviors t)
      eww
      (finance :variables
               hledger-journal-file "~/Documents/journal/my-hledger.journal")
@@ -67,21 +148,10 @@ This function should only modify configuration layer settings."
                   geolocation-enable-automatic-theme-changer t
                   geolocation-enable-location-service t
                   geolocation-enable-weather-forecast t)
-     git
-     helm
-     helpful
      imenu-list
-     (julia :variables julia-backend 'lsp)
-     latex
-     lsp
      markdown
      multiple-cursors
      octave
-     (org :variables
-          org-enable-notifications t
-          org-start-notification-daemon-on-startup t
-          org-enable-org-journal-support t
-          org-todo-dependencies-strategy 'naive-auto)
      prettier
      python
      (shell :variables
@@ -90,6 +160,7 @@ This function should only modify configuration layer settings."
             shell-default-term-shell "/bin/bash")
      spell-checking
      syntax-checking
+     systemd
      treemacs
      version-control
      zig
@@ -132,7 +203,8 @@ It should only modify the values of Spacemacs settings."
   (setq-default
    ;; Maximum allowed time in seconds to contact an ELPA repository.
    ;; (default 5)
-   dotspacemacs-elpa-timeout 5
+   dotspacemacs-elpa-https t
+   dotspacemacs-elpa-timeout 60
 
    ;; Set `gc-cons-threshold' and `gc-cons-percentage' when startup finishes.
    ;; This is an advanced option and should not be changed unless you suspect
@@ -276,7 +348,7 @@ It should only modify the values of Spacemacs settings."
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
    dotspacemacs-default-font '("FiraCode Nerd Font Mono"
-                               :size 12.0
+                               :size 13.0
                                :weight normal
                                :width normal)
 
@@ -603,6 +675,14 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
+  ;; Spelling FR/EN
+  (setq ispell-program-name "aspell"
+        ispell-dictionary "fr"
+        ispell-extra-args '("--sug-mode=ultra"))
+  ;; LanguageTool :
+  (setq langtool-default-language "fr")
+  ;; TODO
+  ;; (setq langtool-language-tool-jar "/chemin/LanguageTool/languagetool-commandline.jar")
   )
 
 (defun dotspacemacs/user-config ()
@@ -611,10 +691,17 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (with-eval-after-load 'org
-    ;; here goes your Org config :)
-    ;; ....
-    )
+  ;; ;; Org Noter / Org-PDFTools : prise de notes liées aux PDF
+  ;; (with-eval-after-load 'org
+  ;;   (require 'org-noter)
+  ;;   (setq org-noter-always-create-frame nil
+  ;;         org-noter-notes-window-location 'vertical-split
+  ;;         org-noter-separate-notes-from-heading t
+  ;;         org-noter-auto-save-last-location t)
+  ;;   (with-eval-after-load 'org-noter
+  ;;     (require 'org-pdftools)
+  ;;     (org-pdftools-setup-link)))
+
   (setq alert-default-style 'notifications)
   (setq calendar-location-name "Villejuif, France"
         calendar-latitude 48.7919
@@ -623,8 +710,29 @@ before packages are loaded."
         sunshine-location "Paris, FR"
         sunshine-units 'metric
         sunshine-show-icons t)
-  )
 
+  ;; PDF: mode nuit par défaut
+  (with-eval-after-load 'pdf-tools
+    ;; Mode nuit par défaut + couleurs confort
+    (setq pdf-view-midnight-colors '("#c6c6c6" . "#121212"))
+    (add-hook 'pdf-view-mode-hook (lambda () (pdf-view-midnight-minor-mode 1))))
+
+  ;; Magit: répertoires indexés pour Magit Repositories (ajustez selon vos dossiers)
+  (setq magit-repository-directories '(("~/repos" . 2)
+                                       ("~/code" . 2)))
+
+  ;; Magit shotcuts
+  (spacemacs/set-leader-keys
+    "gr" 'magit-list-repositories
+    "gR" 'magit-browse-repo
+    "gB" 'magit-blame-addition)
+
+  ;; Rust (lsp-mode / rust-analyzer)
+  (with-eval-after-load 'lsp-mode
+    (setq lsp-rust-analyzer-cargo-watch-command "clippy"
+          lsp-rust-analyzer-proc-macro-enable t))
+
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -633,60 +741,65 @@ before packages are loaded."
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-  (custom-set-variables
-   ;; custom-set-variables was added by Custom.
-   ;; If you edit it by hand, you could mess it up, so be careful.
-   ;; Your init file should contain only one such instance.
-   ;; If there is more than one, they won't work right.
-   '(package-selected-packages
-     '(a ace-link add-node-modules-path aggressive-indent alert all-the-icons
-         auto-compile auto-highlight-symbol auto-yasnippet avy-jump-helm-line
-         browse-at-remote bui centered-cursor-mode cider cider-eval-sexp-fu
-         clean-aindent-mode clojure-mode clojure-snippets closql code-review
-         column-enforce-mode command-log-mode company dap-mode deferred
-         define-word devdocs diff-hl diminish dired-quick-sort disable-mouse
-         dotenv-mode drag-stuff dumb-jump eat edit-indirect elisp-def elisp-demos
-         elisp-slime-nav emacsql emojify emr esh-help eshell-prompt-extras
-         eshell-z eval-sexp-fu evil-anzu evil-args evil-cleverparens
-         evil-collection evil-easymotion evil-escape evil-evilified-state
-         evil-exchange evil-goggles evil-iedit-state evil-indent-plus evil-ledger
-         evil-lion evil-lisp-state evil-matchit evil-mc evil-nerd-commenter
-         evil-numbers evil-org evil-surround evil-textobj-line evil-tutor
-         evil-unimpaired evil-visual-mark-mode evil-visualstar expand-region
-         eyebrowse fancy-battery flycheck flycheck-elsa flycheck-ledger
-         flycheck-package flycheck-pos-tip flyspell-correct flyspell-correct-helm
-         forge ggtags gh-md ghub git-link git-messenger git-modes git-timemachine
-         gitignore-templates gntp gnuplot golden-ratio google-translate grizzl
-         helm-ag helm-c-yasnippet helm-cider helm-comint helm-company
-         helm-descbinds helm-git-grep helm-ls-git helm-lsp helm-make
-         helm-mode-manager helm-org helm-org-rifle helm-projectile helm-purpose
-         helm-swoop helm-themes helm-xref hide-comnt highlight-indentation
-         highlight-numbers highlight-parentheses hl-todo hledger-mode holy-mode
-         htmlize hungry-delete hybrid-mode impatient-mode import-js indent-guide
-         info+ inspector js-doc js2-mode js2-refactor keycast ledger-mode
-         link-hint livid-mode llama load-relative loc-changes log4e lorem-ipsum
-         lsp-docker lsp-mode lsp-origami lsp-treemacs lsp-ui macrostep magit
-         magit-section markdown-mode markdown-toc multi-line multi-term
-         multi-vterm multiple-cursors mwim nameless nerd-icons nodejs-repl
-         npm-mode open-junk-file org-category-capture org-cliplink org-contrib
-         org-download org-mime org-pomodoro org-present org-project-capture
-         org-projectile org-rich-yank org-superstar orgit orgit-forge origami
-         overseer package-lint page-break-lines paradox parseclj parseedn
-         password-generator pcre2el persistent-scratch popwin pos-tip prettier-js
-         quickrun rainbow-delimiters realgud restart-emacs sesman shell-pop
-         simple-httpd skewer-mode smeargle space-doc spaceline
-         spacemacs-purpose-popwin spacemacs-whitespace-cleanup
-         string-edit-at-point string-inflection sunshine symbol-overlay symon
-         term-cursor terminal-here tern test-simple texfrag theme-changer toc-org
-         toml-mode transient treemacs-evil treemacs-icons-dired treemacs-magit
-         treemacs-persp treemacs-projectile treepy undo-fu undo-fu-session unfill
-         unkillable-scratch uuidgen vi-tilde-fringe volatile-highlights vterm
-         vundo web-beautify wgrep winum with-editor writeroom-mode ws-butler yaml
-         yasnippet yasnippet-snippets)))
-  (custom-set-faces
-   ;; custom-set-faces was added by Custom.
-   ;; If you edit it by hand, you could mess it up, so be careful.
-   ;; Your init file should contain only one such instance.
-   ;; If there is more than one, they won't work right.
-   )
-  )
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(a ace-link add-node-modules-path aggressive-indent aio alert all-the-icons
+       auctex-latexmk auto-compile auto-dictionary auto-highlight-symbol
+       auto-yasnippet avy-jump-helm-line blacken browse-at-remote bui
+       centered-cursor-mode charmap cider cider-eval-sexp-fu clean-aindent-mode
+       clojure-mode clojure-snippets closql code-review column-enforce-mode
+       command-log-mode company company-quickhelp company-statistics cond-let
+       conda csv-mode dap-mode deferred define-word devdocs diff-hl diminish
+       dired-quick-sort disable-mouse docker dockerfile-mode dotenv-mode
+       drag-stuff dumb-jump eat edit-indirect elisp-def elisp-demos
+       elisp-slime-nav emacsql emmet-mode emojify emr esh-help
+       eshell-prompt-extras eshell-z eval-sexp-fu evil-anzu evil-args
+       evil-cleverparens evil-collection evil-easymotion evil-escape
+       evil-evilified-state evil-exchange evil-goggles evil-iedit-state
+       evil-indent-plus evil-ledger evil-lion evil-lisp-state evil-matchit
+       evil-mc evil-nerd-commenter evil-numbers evil-org evil-surround
+       evil-textobj-line evil-tutor evil-unimpaired evil-visual-mark-mode
+       evil-visualstar expand-region eyebrowse fancy-battery flycheck
+       flycheck-elsa flycheck-ledger flycheck-package flycheck-pos-tip
+       flyspell-correct flyspell-correct-helm forge ggtags gh-md ghub git-link
+       git-messenger git-modes git-timemachine gitignore-templates gntp gnuplot
+       golden-ratio google-translate grizzl haml-mode helm-ag helm-c-yasnippet
+       helm-cider helm-comint helm-company helm-css-scss helm-descbinds
+       helm-git-grep helm-ls-git helm-lsp helm-make helm-mode-manager helm-org
+       helm-org-rifle helm-projectile helm-purpose helm-swoop helm-themes
+       helm-xref hide-comnt highlight-indentation highlight-numbers
+       highlight-parentheses hl-todo hledger-mode holy-mode htmlize
+       hungry-delete hybrid-mode impatient-mode import-js indent-guide info+
+       inspector ivy js-doc js2-mode js2-refactor keycast ledger-mode link-hint
+       livid-mode llama load-relative loc-changes log4e lorem-ipsum lsp-docker
+       lsp-mode lsp-origami lsp-pyright lsp-treemacs lsp-ui macrostep magit
+       magit-delta magit-section magit-todos markdown-mode markdown-toc
+       multi-line multi-term multi-vterm multiple-cursors mwim nameless
+       nerd-icons nodejs-repl npm-mode open-junk-file org-category-capture
+       org-cliplink org-contrib org-download org-mime org-pomodoro org-present
+       org-project-capture org-projectile org-rich-yank org-superstar orgit
+       orgit-forge origami overseer ox-gfm package-lint page-break-lines paradox
+       parseclj parseedn password-generator pcre2el pdf-tools pdf-view-restore
+       persistent-scratch popwin pos-tip prettier-js pug-mode quickrun
+       rainbow-delimiters realgud restart-emacs ron-mode rust-mode rustic
+       scss-mode sesman shell-pop simple-httpd skewer-mode slim-mode smeargle
+       space-doc spaceline spacemacs-purpose-popwin spacemacs-whitespace-cleanup
+       sql-indent string-edit-at-point string-inflection sunshine symbol-overlay
+       symon tablist tagedit term-cursor terminal-here tern test-simple texfrag
+       theme-changer toc-org toml-mode transient treemacs-evil
+       treemacs-icons-dired treemacs-magit treemacs-persp treemacs-projectile
+       treepy undo-fu undo-fu-session unfill unkillable-scratch uuidgen
+       vi-tilde-fringe volatile-highlights vterm vundo web-beautify
+       web-completion-data web-mode wgrep winum with-editor writeroom-mode
+       ws-butler xterm-color yaml yaml-mode yasnippet yasnippet-snippets)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)

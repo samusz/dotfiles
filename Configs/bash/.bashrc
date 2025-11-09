@@ -57,9 +57,12 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033\[00m\]:\[\033\[01;34m\]\w\[\033\[00m\]\$ '
+  # removed host name
+  # Do NOT escape '[' after the 033
+  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ '
 else
-  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+  PS1='${debian_chroot:+($debian_chroot)}\u:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -75,12 +78,12 @@ esac
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
   alias ls='ls --color=auto'
-  #alias dir='dir --color=auto'
-  #alias vdir='vdir --color=auto'
+  alias dir='dir --color=auto'
+  alias vdir='vdir --color=auto'
 
-  #alias grep='grep --color=auto'
-  #alias fgrep='fgrep --color=auto'
-  #alias egrep='egrep --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
   alias ls='lsd'
 fi
 
@@ -88,9 +91,13 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
+alias ll='ls -lrt'
+alias la='ls -A'
+alias l='ls -CF'
+# from blog post
+# https://minhajuddin.com/2019/06/03/how-to-copy-output-of-a-function-to-your-clipboard-in-elixir-or-ruby/
+
+alias xc='tee /dev/tty | xclip -selection clipboard'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -108,6 +115,18 @@ fi
 if [ -d "$HOME/.local/bin" ]; then
   export PATH="$HOME/.local/bin:$PATH"
 fi
+if [ -d "$HOME/.cargo/bin" ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
+# ~/.mix/escripts. for elixir mix installed binaries
+if [ -d "$HOME/.mix/escripts" ]; then
+  export PATH="$HOME/.mix/escripts:$PATH"
+fi
+
+# Texlive after install following https://tug.org/texlive/quickinstall.html
+if [ -d "/usr/local/texlive/2025/bin/x86_64-linux/" ]; then
+  export PATH="/usr/local/texlive/2025/bin/x86_64-linux/:$PATH"
+fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -120,5 +139,23 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# had to export the result of the `asdf completion bash` command to a file
 . <(asdf completion bash)
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+#. "$HOME/.asdf/adsf-completion.sh"
+export PATH="$HOME/.asdf/bin:$PATH"
+export PATH="$HOME/.asdf/shims:$PATH"
+
+source "$HOME/.mix_completions.bash"
+# Note that the directories
+#
+# '/var/lib/flatpak/exports/share'
+# '/home/smuszlak/.local/share/flatpak/exports/share'
+# . "$HOME/.asdf/completions/asdf.bash"
+# . "$HOME/.asdf/asdf.sh"
+
+# to get iex history working
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+# Fly.io CLI
+export FLYCTL_INSTALL="/home/smuszlak/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
