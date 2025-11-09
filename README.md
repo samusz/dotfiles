@@ -1,6 +1,8 @@
 # My dotfile repo 
 
-Created with tuckr  https://github.com/RaphGL/Tuckr
+Created with `tuckr`  [https://github.com/RaphGL/Tuckr]
+
+The following are my cheatsheet on `tuckr`.
 
 ## Add a dotfile to be tracked 
 
@@ -19,14 +21,28 @@ tuckr add -a groupname
 ```
 
 Later on do :
-```shell
+```bash
 tuckr add groupname
+```
 
-# To get system up to date with repo
+## To get system up to date with repo
 
-```shell
+For a new machine:
+
+1. clone your dotfile repos,
+```shl
 git clone <this repo> ~/.config/dotfiles
-# install tuckr
-cargo install --git https://github.com/RaphGL/Tuckr.git
+```
 
+2. install tuck 
+```shell
+cargo install --git https://github.com/RaphGL/Tuckr.git
+```
+
+3. Update local dotfiles to your repos' dotfiles.
+```shell
+
+:TODO:
 tuckr 
+```
+```
