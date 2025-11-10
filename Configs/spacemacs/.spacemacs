@@ -795,7 +795,8 @@ This function is called at the very end of Spacemacs initialization."
        treepy undo-fu undo-fu-session unfill unkillable-scratch uuidgen
        vi-tilde-fringe volatile-highlights vterm vundo web-beautify
        web-completion-data web-mode wgrep winum with-editor writeroom-mode
-       ws-butler xterm-color yaml yaml-mode yasnippet yasnippet-snippets)))
+       ws-butler xterm-color yaml yaml-mode yasnippet yasnippet-snippets
+       ziggy-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
