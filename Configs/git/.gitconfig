@@ -1,8 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-	name = Sacha Muszlak
-	email = sacha.muszlak@inrae.fr
+	name = Samusz
+	email = 341706+samusz@users.noreply.github.com
 [init]
 	defaultBranch = main
 [core]
@@ -10,18 +10,18 @@
 ; [diff]
 ; 	external = meld
 ; 	tool = meld
-[difftool "meld"]
-	path = /usr/bin/meld
-[difftool]
-	prompt = false
-[merge]
-	tool = meld
-[mergetool "meld"]
-	path = /usr/bin/meld
-[mergetool]
-	prompt = false
-[alias]
-	meld = !git difftool -t meld --dir-diff
+; [difftool "meld"]
+; 	path = /usr/bin/meld
+; [difftool]
+; 	prompt = false
+; [merge]
+; 	tool = meld
+; [mergetool "meld"]
+; 	path = /usr/bin/meld
+; [mergetool]
+; prompt = false
+ [alias]
+; 	meld = !git difftool -t meld --dir-diff
 	logp = !git log --pretty=oneline --abbrev-commit
 [filter "lfs"]
 	required = true
