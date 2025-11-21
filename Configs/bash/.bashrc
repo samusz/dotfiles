@@ -99,6 +99,11 @@ alias l='ls -CF'
 
 alias xc='tee /dev/tty | xclip -selection clipboard'
 
+# better `ps aux` with ov
+if test -x /usr/bin/ov; then
+  alias psaux='ps aux | ov -H1 --column-delimiter "/\s+/" --column-rainbow --column-mode'
+fi
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -159,3 +164,5 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # Fly.io CLI
 export FLYCTL_INSTALL="/home/smuszlak/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+source /home/smuszlak/.config/broot/launcher/bash/br

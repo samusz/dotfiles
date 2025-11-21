@@ -741,66 +741,66 @@ before packages are loaded."
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(a ace-link add-node-modules-path aggressive-indent aio alert all-the-icons
-       auctex-latexmk auto-compile auto-dictionary auto-highlight-symbol
-       auto-yasnippet avy-jump-helm-line blacken browse-at-remote bui
-       centered-cursor-mode charmap cider cider-eval-sexp-fu clean-aindent-mode
-       clojure-mode clojure-snippets closql code-review column-enforce-mode
-       command-log-mode company company-quickhelp company-statistics cond-let
-       conda csv-mode dap-mode deferred define-word devdocs diff-hl diminish
-       dired-quick-sort disable-mouse docker dockerfile-mode dotenv-mode
-       drag-stuff dumb-jump eat edit-indirect elisp-def elisp-demos
-       elisp-slime-nav emacsql emmet-mode emojify emr esh-help
-       eshell-prompt-extras eshell-z eval-sexp-fu evil-anzu evil-args
-       evil-cleverparens evil-collection evil-easymotion evil-escape
-       evil-evilified-state evil-exchange evil-goggles evil-iedit-state
-       evil-indent-plus evil-ledger evil-lion evil-lisp-state evil-matchit
-       evil-mc evil-nerd-commenter evil-numbers evil-org evil-surround
-       evil-textobj-line evil-tutor evil-unimpaired evil-visual-mark-mode
-       evil-visualstar expand-region eyebrowse fancy-battery flycheck
-       flycheck-elsa flycheck-ledger flycheck-package flycheck-pos-tip
-       flyspell-correct flyspell-correct-helm forge ggtags gh-md ghub git-link
-       git-messenger git-modes git-timemachine gitignore-templates gntp gnuplot
-       golden-ratio google-translate grizzl haml-mode helm-ag helm-c-yasnippet
-       helm-cider helm-comint helm-company helm-css-scss helm-descbinds
-       helm-git-grep helm-ls-git helm-lsp helm-make helm-mode-manager helm-org
-       helm-org-rifle helm-projectile helm-purpose helm-swoop helm-themes
-       helm-xref hide-comnt highlight-indentation highlight-numbers
-       highlight-parentheses hl-todo hledger-mode holy-mode htmlize
-       hungry-delete hybrid-mode impatient-mode import-js indent-guide info+
-       inspector ivy js-doc js2-mode js2-refactor keycast ledger-mode link-hint
-       livid-mode llama load-relative loc-changes log4e lorem-ipsum lsp-docker
-       lsp-mode lsp-origami lsp-pyright lsp-treemacs lsp-ui macrostep magit
-       magit-delta magit-section magit-todos markdown-mode markdown-toc
-       multi-line multi-term multi-vterm multiple-cursors mwim nameless
-       nerd-icons nodejs-repl npm-mode open-junk-file org-category-capture
-       org-cliplink org-contrib org-download org-mime org-pomodoro org-present
-       org-project-capture org-projectile org-rich-yank org-superstar orgit
-       orgit-forge origami overseer ox-gfm package-lint page-break-lines paradox
-       parseclj parseedn password-generator pcre2el pdf-tools pdf-view-restore
-       persistent-scratch popwin pos-tip prettier-js pug-mode quickrun
-       rainbow-delimiters realgud restart-emacs ron-mode rust-mode rustic
-       scss-mode sesman shell-pop simple-httpd skewer-mode slim-mode smeargle
-       space-doc spaceline spacemacs-purpose-popwin spacemacs-whitespace-cleanup
-       sql-indent string-edit-at-point string-inflection sunshine symbol-overlay
-       symon tablist tagedit term-cursor terminal-here tern test-simple texfrag
-       theme-changer toc-org toml-mode transient treemacs-evil
-       treemacs-icons-dired treemacs-magit treemacs-persp treemacs-projectile
-       treepy undo-fu undo-fu-session unfill unkillable-scratch uuidgen
-       vi-tilde-fringe volatile-highlights vterm vundo web-beautify
-       web-completion-data web-mode wgrep winum with-editor writeroom-mode
-       ws-butler xterm-color yaml yaml-mode yasnippet yasnippet-snippets
-       ziggy-mode)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-)
+  (custom-set-variables
+   ;; custom-set-variables was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   '(package-selected-packages
+     '(a ace-link add-node-modules-path aggressive-indent aio alert all-the-icons
+         auctex-latexmk auto-compile auto-dictionary auto-highlight-symbol
+         auto-yasnippet avy-jump-helm-line blacken browse-at-remote bui
+         centered-cursor-mode charmap cider cider-eval-sexp-fu clean-aindent-mode
+         clojure-mode clojure-snippets closql code-review column-enforce-mode
+         command-log-mode company company-quickhelp company-statistics cond-let
+         conda csv-mode dap-mode deferred define-word devdocs diff-hl diminish
+         dired-quick-sort disable-mouse docker dockerfile-mode dotenv-mode
+         drag-stuff dumb-jump eat edit-indirect elisp-def elisp-demos
+         elisp-slime-nav emacsql emmet-mode emojify emr esh-help
+         eshell-prompt-extras eshell-z eval-sexp-fu evil-anzu evil-args
+         evil-cleverparens evil-collection evil-easymotion evil-escape
+         evil-evilified-state evil-exchange evil-goggles evil-iedit-state
+         evil-indent-plus evil-ledger evil-lion evil-lisp-state evil-matchit
+         evil-mc evil-nerd-commenter evil-numbers evil-org evil-surround
+         evil-textobj-line evil-tutor evil-unimpaired evil-visual-mark-mode
+         evil-visualstar expand-region eyebrowse fancy-battery flycheck
+         flycheck-elsa flycheck-ledger flycheck-package flycheck-pos-tip
+         flyspell-correct flyspell-correct-helm forge ggtags gh-md ghub git-link
+         git-messenger git-modes git-timemachine gitignore-templates gntp gnuplot
+         golden-ratio google-translate grizzl haml-mode helm-ag helm-c-yasnippet
+         helm-cider helm-comint helm-company helm-css-scss helm-descbinds
+         helm-git-grep helm-ls-git helm-lsp helm-make helm-mode-manager helm-org
+         helm-org-rifle helm-projectile helm-purpose helm-swoop helm-themes
+         helm-xref hide-comnt highlight-indentation highlight-numbers
+         highlight-parentheses hl-todo hledger-mode holy-mode htmlize
+         hungry-delete hybrid-mode impatient-mode import-js indent-guide info+
+         inspector ivy js-doc js2-mode js2-refactor keycast ledger-mode link-hint
+         livid-mode llama load-relative loc-changes log4e lorem-ipsum lsp-docker
+         lsp-mode lsp-origami lsp-pyright lsp-treemacs lsp-ui macrostep magit
+         magit-delta magit-section magit-todos markdown-mode markdown-toc
+         multi-line multi-term multi-vterm multiple-cursors mwim nameless
+         nerd-icons nodejs-repl npm-mode open-junk-file org-category-capture
+         org-cliplink org-contrib org-download org-mime org-pomodoro org-present
+         org-project-capture org-projectile org-rich-yank org-superstar orgit
+         orgit-forge origami overseer ox-gfm package-lint page-break-lines paradox
+         parseclj parseedn password-generator pcre2el pdf-tools pdf-view-restore
+         persistent-scratch popwin pos-tip prettier-js pug-mode quickrun
+         rainbow-delimiters realgud restart-emacs ron-mode rust-mode rustic
+         scss-mode sesman shell-pop simple-httpd skewer-mode slim-mode smeargle
+         space-doc spaceline spacemacs-purpose-popwin spacemacs-whitespace-cleanup
+         sql-indent string-edit-at-point string-inflection sunshine symbol-overlay
+         symon tablist tagedit term-cursor terminal-here tern test-simple texfrag
+         theme-changer toc-org toml-mode transient treemacs-evil
+         treemacs-icons-dired treemacs-magit treemacs-persp treemacs-projectile
+         treepy undo-fu undo-fu-session unfill unkillable-scratch uuidgen
+         vi-tilde-fringe volatile-highlights vterm vundo web-beautify
+         web-completion-data web-mode wgrep winum with-editor writeroom-mode
+         ws-butler xterm-color yaml yaml-mode yasnippet yasnippet-capf
+         yasnippet-classic-snippets yasnippet-snippets ziggy-mode)))
+  (custom-set-faces
+   ;; custom-set-faces was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   )
+  )

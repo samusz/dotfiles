@@ -1,736 +1,676 @@
 ls
+rm config.fish/
+rmdir config.fish/
+mv ../config.fish .
+ls
+cat config.fish 
 fish
-tldr gettext
-cd..
+ls
+nvim config.fish 
+fish
 cd ..
-cd learn_phoenix/
-ls
-fish
-mix local rebar
-cd code/elixir/phoenix-todo-list-tutorial/
-git status
-git pull
-git br
-git branch 
-fish
-git config -all
-git config -global
-git config --global
-git config --global list
-git config --global --list
-cd ..
-rm -rf phoenix-todo-list-tutorial/
-git clone git@github.com:samusz/phoenix-todo-list-tutorial.git
-cd phoenix-todo-list-tutorial/
-git pull
-mix phx.server
-mix deps.get
-ls
-git status
-mix phx.server
-mix deps.get
-mix phx.server
-mix help phx.gen.auth
-exit
-lspci
-cd code/phoenix/phoenix-todo-list-tutorial/
-ls
-mix phx.server
-exit
-git status
-mix phx.server
-mix guardian.gen.secret
-mix deps.get
-mix deps.update
-mix deps.update guardian
-mix deps.update --all
-mix deps.get
-mix phx.server
-ls
-git status 
-mv test/app/guardian.exs lib/app/
-mix phx.server
-git status
-git add config/config.exs mix.exs lib/app/guardian.exs 
-git commit -m "Add Auth module Guardian still with errors"
-ls
-git push 
-ls
-mix phx.server
-mix deps.get
-mix phx.server
-mix setup
-rm mix.lock 
-mix setup
-mix deps.get
-mix deps.update
-mix deps.update --all
-mix deps.unlock
-mix deps.unlock --all
-mix deps.get
-mix deps.update auth_plug
-mix deps.get
-mix deps.update --all
-git status 
-git add mix.exs 
-git commit -m "Updated all dependencies in mix.exs
-
-but not usefull which generated errrors" 
-git push
-git status
-jj status
-git add config/test.exs 
-git status
-git add lib/app/.expert/expert.log 
-git commit -m "Add expert.log "
-git status
-git push
-ls
-mix phx.server
+ls -al 
 cd ..
 ls
-ls -lrt
-cd learn_phoenix/
+ls -al .config
+ls -al 
+tuckr 
+tuckr status
+tuckr add 
+tuckr add --help
+tuckr --help
+exit 
+cd 
+cd code/zig/zine/example.com/
+ls
+cd content/
+ls
+mv i18n/ ../
+ls
+cd ..
+git status
+cd ..
+mkdir lfi-villejuif.fr
+cp -R example.com/* lfi-villejuif.fr/
+cd lfi-villejuif.fr/
+tree
+cd ..
+mkdir clean.com
+cd clean.com/
+zine init
+git init
+nvim .git/config 
+ls
+git add -A .
+git commit -m"Initial commit"
+git log
+nvim ~/.gitconfig 
+tuckr add git
+which cargo
+asdf reshim cargo
+asdf reshim rust
+tuckr
+tuckr add git
+tuckr list 
+tuckr ls
+tuckr ls profiles
+tuckr status
+tuckr set fish 
+tuckr help add 
+tuckr add -a fish 
+tuckr ls 
+tuckr ls profiles 
+ls
+stow
+stow list
+stow --status
+cd 
+stow 
+tuckr
+tuckr status
+cd .config/dotfiles/
 ls
 nvim README.md 
-mix phx.server
-ls
-rm -rf _build/
-mix phx.serg
-mix phx.server
-sudo apt-get install watchman
-mix phx.server
-journalctl -b | grep -i "flicker".
-sudo journalctl -b | grep -i "flicker".
-sudo journalctl -b | grep -i "screen".
-xrandr
-nvim .
-emacs &
-nvim .
-mix escript.install github livebook-dev/livebook
-livereload 
-exit 
-ls
-latexmk main.tex
-tldr latexmk
-latexmk -c
-latexmk -c .
-latexmk 
-tldr latexmk
-latexmk main.tex
-cd 
-exit
-cd 
-nvim .bashrc 
-exit
-cd code/phoenix/
-ls
-cd kv_umbrella/
-ls
-mix test
-nvim mix.exs 
-tree 
-fish
-exit
-cd code/phoenix/phoenix-todo-list-tutorial/
-ls
+git-shell 
 git status
-mix phx.server
+ls
+nvim README.md 
+tuckr group
+tuckr status
+which tuckr
+cat README.md 
+cargo install --git https://github.com/RaphGL/Tuckr.git
+tuckr status
+ls
+cd Configs/git/
+ls
+ls -al 
+nvim .gitconfig 
+systemctl restart cups.service
+ls
+cd 
+ls
+fish
+nvim .config/dotfiles/Configs/fish/.config/fish/config.fish 
+fish
+nvim .config/dotfiles/Configs/fish/.config/fish/config.fish 
+fish
+ls -al /
 cd /tmp/
 ls
-ls -lrt
-fish 
-sudo apt install balena-etcher 
-apt search etcher 
-cd code/phoenix/phoenix-todo-list-tutorial/
-mix test
-cd /tmp/
-ls -lrt
-fish
-echo "deb https://ppa.launchpad.net/mkusb/ppa/ubuntu bionic main" | sudo tee /etc/apt/sources.list.d/mkusb.list
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 54B8C8AC
-sudo apt update
-sudo apt install --install-recommends mkusb
-mkusb
-sudo apt install --install-recommends mkusb
-echo "deb https://ppa.launchpad.net/mkusb/ppa/ubuntu bionic main" | sudo tee /etc/apt/sources.list.d/mkusb.list
-cd /etc/apt/
-cd code/phoenix/phoenix-todo-list-tutorial/
-mix status
-nvim lib/app_web/live/user_live/login.ex 
-emacs lib/app_web/live/user_live/login.ex &
-fish
-cd code/forks/
+ls -al 
+ls -alrt 
+cd tmux-1000/
 ls
-cd latexcv/
-ls
-latexmk modern/main.tex 
-nvim modern/main.tex 
-latexmk modern/main.tex 
-latexmk -c modern/main.tex 
-ls -lrt 
-cd modern/
-ls
-ls -lrt
-latexmk main.tex 
-ls -lrt
-latexmk -c main.tex 
-ls -lrt
-latexmk -c main.tex 
-latexmk main.tex 
-latexmk -c main.tex 
-latexmk main.tex 
-ls -lrt
-evince main.pdf &
+cat default 
+ls -al 
 cd ..
-ls
-cd classic/
-ls
-latexmk main.tex 
-evince main.pdf &
-cd ..
-ls
-cd minimalistic/
-ls
-latexmk main.tex 
-latexmk -c main.tex 
-latexmk main.tex 
-latexmk -c main.tex 
-latexmk main.tex 
-latexmk -c main.tex 
-latexmk main.tex 
-latexmk -c main.tex 
-latexmk main.tex 
-evince main.pdf &
-cd ..
-ls
-cd two_column/
-ls
-latexmk main.tex 
-cd ..
-ls
-cd sidebar
-latexmk main.tex 
-sudo apt install v4l2loopback-dkms
-sudo apt update
-sudo apt install ffmpeg
-sudo apt install obs-studio
-nix
-nix-env
-sudo nvim /etc/systemd/sleep.conf 
-sudo vim /etc/systemd/sleep.conf 
-sudo vi /etc/systemd/sleep.conf 
-systemctl status hibernate.target
-cat /proc/swaps
-mokutil --sb-state
-sudo vi /etc/systemd/sleep.conf 
-sudo vi /etc/initramfs-tools/conf.d/resume 
-update-grub && update-initramfs -u
-systemctl hibernate 
-nvim ~/.iex.exs
-emacs ~/.iex.exs &
-xclip 
-sudo apt upgrade xclip 
-sqlite3 
-git config --global --lisst
-git config --global --list
-ls
-mix run 
-mix run .
-nvim .iex.exs 
-mix install LXical
-cd code/work/
-ls
-git clone git@forge.inrae.fr:dipso/datainrae/curation.git
-ls
-asdf 
-uninstall 
-fish
-cd ~/.local/share/gnome-shell/
-ls
-cd extension
-ls
-cd extensions/
+cd .com.google.Chrome.cdlo1U/
 ls
 cd 
-cd code/work/curation/
 ls
-cat delete-dataset-link.md 
-asdf
-cd code/elixir/
+rm lazygit.tar.gz 
 ls
-mix new protocols 
-mix text
-mix test
+mv lazygit .local/bin/
 ls
-codium .
-asdf
-asdf info
-which asdf
+cd GP_HTML/
 ls
-asdf list all
-asdf list all elixir
-asdf reshim elixir
-asdf reshim erlang
-cd code/elixir/
+cd defaultbrowser/
 ls
-git clone https://github.com/elixir-lsp/elixir-ls.git
-ls
-cd elixir-ls/
-mix deps.get
-mix compile 
-elixir --version
-erl -version
-source ~/.bashrc
-rm -rf ~/.config/Cod
-source ~/.bashrc
-asdf install shellcheck 0.7.0*
-asdf install shellcheck 0.7.0
-asdf plugin add shellcheck https://github.com/luizm/asdf-shellcheck.git
-asdf install shellcheck 0.7.0
-s
-shellcheck 
-asdf global shellcheck 0.7.0
-cd 
-cd code/work/
-ls
-git clone git@forge.inrae.fr:sacha.muszlak/open-class-scripts.git
-cd open-class-scripts/
-ls
-git status
-jj git .
-jj git init
-jj bookmark track main@origin
-jj status
-jj info 
-nvim ~/.bashrc 
-nvim ~/.bash_profile 
-nvim ~/.bashrc 
-asdf
-asdf list
-asdf unistall erlang 28.0.2
-asdf uninstall erlang 28.0.2
-. ~/.bashrc
-asdf list
-asdf uninstall julia latests
-asdf list
-asdf global rust 1.90.0
-asdf set -u rust 1.90.0
-asdf list
-asdf set -u shellcheck 0.7.0
-asdf list
-ls
-cd 
-cd code/elixir/
-mix new hello_world
-ls
-cd hello_world/
-mix test
-codium .
-asdf reshim elixir
-asdf reshim erlang
-mix deps.update --all
-mix deps.get
-codium /home/smuszlak/.bashrc 
-asdf list all elixir
-asdf install elixir 1.19.1-otp-28
-asdf list
-asdf set -u elixir 1.19.1-otp-28
-asdf list
-codium /home/smuszlak/.bashrc 
-codium .
-mix hex info jason
-mix hex.info jason
-cd 
-cd Documents/work/
-ls
-mv Volet4-2025_* isc\ /
-ls
-mv PGD_entité1402SOEREPRO_3_sites_en_cours_DipSo* isc\ /
-ls
-mv P2M2_1349_Volet4-2025.pdf isc\ /
-ls
+nvim resp.html 
+ls -al
 cd ..
+ls
+ls -al 
+cd ..
+rm -rf GP_HTML/
+cd dev/
+ls
+cd cpp/
+ls
+cd QGIS/
+ls
+du -h  
+cd ..
+mv cpp ../code/
+ls
+ls -al 
+cd ..
+rmdir dev/
+ls
+cd auto/
+ls
+cat my-bibliography.el 
+cd ..
+rm -rf auto/
+ls
+mv grisbitestHomebank.xhb Documents/
+ls
+cd repos/
+ls
+cd perso/
+ls
+cd dotfiles/
+ls
+ls -al 
+cd ..
+rmdir dotfiles/
+ls
+cd Notes/
 ls
 cd ..
 ls
 cd org/
 ls
-emacsclient notes-open-class-curation.org 
-systemctl suspend
-systemctl suspend -i
-clear
-echo "GB Version. Previous: none. Current: 0.4.12"
-julia --startup-file=no --depwarn=no /home/smuszlak/.vscode-oss/extensions/geniebuilder.geniebuilder-insider-0.4.12-universal/scripts/rungb.jl
-elixir --version
-mix hex.info makeup_elixir
-mix help compile.app
-cd ..
-ls
-cd blog/
-ls
-exit
 git status
+git add data2graph.org 
+git add zine.org
+git add notes.org 
+git commit -m "Some updates and notes for zine data2graph idea"
 git push
-git remote add git@github.com:samusz/blog.git
-git remote add origin git@github.com:samusz/blog.git
-git push
-git push --set-upstream origin main
-git remote add main git@github.com:samusz/blog.git
-git push --set-upstream origin main
-git push
-git push --set-upstream origin main
-git pull --rebase
-ls
-git status
-git add priv/site/index.slime 
-git commit -m"Changed index"
-git pull --rebase
-git branch
-git branch --set-upstream-to=origin/main main
-git status
-git pull --rebase
-ls
-git status
-git add .gitignore 
-git commit -m"Add .gitignore"
-git push 
-git pull --rebase
-git push 
-nvim justfile 
-ls
-git add justfile 
-git commit -m"Add justfile for shell commands"
-git push
-just 
-asdf plugin-update --all
-asdf update --all
-asdf update
-asdf plugin update 
-asdf plugin 
-asdf plugin update 
-asdf plugin update --all
-asdf plugin list --all
-asdf plugin list
-asdf plugin 
-asdf plugin list erlang
-asdf plugin erlang 
-asdf erlang list 
-asdf current erlang 
-sudo apt install inotify-tools libtool automake libgmp-dev make libwxgtk-webview3.0-gtk3-dev libssl-dev libncurses5-dev 
-fish
-exit
-cd ..
-cd web/
-ls
-fish 
-:makeup_elixir, "x.y.z"
-cd ..
-ls
-mix archive.install hex still_new
-mix still.new mysite
-ls
-rm -rf mysite/
-mix still.new blog
-cd blog/
-ls
-mix still.dev
-mix deps.get
-mix still.dev
-cd ../blog/
-nvim justfile
-ls
-git status
-git init
-jj git init
-git status
-git add -A 
-git commit -m "New blog setup with elixir still" 
-ls
-nvim priv/site/index.slime 
-cd code/webtest/
-ls
-cd web/
-ls
-mix run 
-mix test
-nvim .elixir_ls/
-ls
-cd ..
-ls
-h
-ls
-ls
-sudo apt search tmux 
-exit 
-ls
-man tmux 
-# Show all installable versions
-asdf list-all upt
-# Install specific version
-asdf install upt latest
-# Set a version globally (on your ~/.tool-versions file)
-asdf global upt latest
-# Now upt commands are available
-upt --version
-asdf
-source ~/.bashrc
-# Show all installable versions
-asdf list-all upt
-# Install specific version
-asdf install upt latest
-# Set a version globally (on your ~/.tool-versions file)
-asdf global upt latest
-# Now upt commands are available
-upt --version
-asdf plugin add upt https://github.com/ORCID/asdf-upt.git
-asdf install upt latest
-asdf global upt latest
-asdf set -e  upt latest
-asdf set -u  upt latest
-upt --version
-upt list -u
-upt list
-upt -h
-upt update
-sudo upt update
-sudo asdaf
-sudo asdf
-ls
-exit
-l
-ls
+git pull 
 cd 
+cd org
 ls
-cd code/zig/introduction/
-ls
-touch README.org
-zig init .
-zig init
-ls
-exit
-ls
-nvim .
-ls
+git status
 cd ..
-ls
-cd zig/
-ls
-git clone https://github.com/technologylab-ai/fj.git
-cd fj/
-ls
-zig --version
-zig version
-asdf zig list --all
-asdf zig list 
-asdf list zig 
-asdf list zig --all
-asdf list all zig 
-asdf install zig 0.15.2
-nvim .tool-versions 
-zig build
-zig test
-zig run 
-ls
-./zig-out/bin/fj 
-./zig-out/bin/fj init
-./zig-out/bin/fj -h
-tldr ln 
-ln -s ./zig-out/bin/fj ~/.local/bin/
-fj
-source ~/.bashrc 
-fj
-ls -al fj ~/.local/bin/
-tldr ln 
-ln -sf /zig-out/bin/fj ~/.local/bin/
-fj
-source ~/.bashrc 
-fj
-ls -al fj ~/.local/bin/
-ln -sf zig-out/bin/ ~/.local/bin/
-fj
-ln -sf ~/code/zig/fj/zig-out/bin/fj ~/.local/bin/
-fj
-fj init --generate=true config.json
-nvim ~/.fj
-ls
-fj init config.json
-nvim ~/.fj
-cd 
-ls
+ls -al org
 cd -
 ls
+cd ../repos/
+ls
+cd perso/
+ls
+cd Notes/
+ls
+git status
+git commit -a 
+git push 
+cd ..
+ls
 ls -al 
-fj init config.json
-nvim config.json 
+unzip 2024_SachaMuszlak_CV.zip 
 ls
-cp ~/Pictures/Logos/goban_messy.gif ./logo.jpg
+rm blob.tex cv-* mabiblio.bib maletter* moderncv* 
 ls
-emacs logo.jpg &
+rm cv.md 
+rm NotUsed.tex picture.* tweaklist.sty 
 ls
-fj init config.json
+mv maTete.JPG ~/Pictures/
+mv 2024_SachaMuszlak_CV.zip org/
 ls
-cp logo.jpg logo.png 
-fj init config.json
-fj 
-fj git status
-cd 
-cd .fj/
+cd org/
 ls
 git status
-fj 
-fj client new TestClient
-ls
-nvim TestClient.json 
-git status
-fj rate new standard
-ls
-nvim standard.json 
-fj invoice new acme --rates=standard
-fj invoice new TestClient --rates=standard
-ls
-cd clients/
+git add 2024_SachaMuszlak_CV.zip 
+git push 
 ls
 cd ..
-mv TestClient.json clients/
 ls
-fj invoice new TestClient --rates=standard
+cd ..
+cd prog/
 ls
-mv clients/TestClient.json .
-fj client commit TestClient
-fj rate commit standard
-fj invoice new TestClient --rates=standard
-fj
-fj invoice new TestClient --rates=standard --project=testproject
-fj invoice compile
-cd invoice--2025-XXX--TestClient/
-fj invoice compile
+cd emacs/
+ls
+cd ..
+mv emacs/ ~/code/tools/
+ls
+cd frescobaldi-themes/
+ls
 cd ..
 ls
-cd templates/
+cd ..
+rm -rf prog/
 ls
-tlmgr install caption.sty
-tlmgr install caption
-fj invoice compile
 cd ..
 ls
-cd invoice--2025-XXX--TestClient/
-fj invoice compile
-tlmgr install siunitx
-fj invoice compile
-tlmgr install ulem
-fj invoice compile
-tlmgr install listings
-fj invoice compile
-tlmgr install listingsutf8
-fj invoice compile
-cp ~/Pictures/Logos/goban-messy.png logo.png
-fj invoice compile
-evince invoice--2025-XXX--TestClient.pdf &
+cd Public/
 ls
-systemctl hibernate 
-cd ..
-fj 
-fj letter 
-fj letter new
-fj letter new -h
-fj letter list
-fj letter new TestClient
-fj letter new -h
-systemctl hibernate 
-ls
-cd 
-ls
-cd org
-emacs notes.org &
-cd code/zig/
-ls
-mkdir api-curl
-cd api-curl/
-zig init .
-zig init
-tree 
-cat build.zig.zon 
-nvim build.zig
-zig fetch --save=curl https://github.com/jiacai2050/zig-curl/archive/refs/tags/${TAG}.zip
-echo $TAG
-export TAG=v0.3.2
-zig fetch --save=curl https://github.com/jiacai2050/zig-curl/archive/refs/tags/${TAG}.zip
-ls
-tree
-ls -al
-cd .zig-cache/
-ls
-tree
 cd ..
 ls
-sudo apt install libcurl 
-sudo apt search libcurl
-sudo apt install libcurl4
-nivm src/main.zig 
-nvim src/main.zig 
-zig build 
-zig version 
-cp ~/.tool-versions .
-nvim .tool-versions 
-nvim src/main.zig 
+cd Templates/
+ls
+ls -al 
+cd ..
+rm -rf Templates/
+cd exercism/
+sl
+ls 
+exercism 
+ls
+zig buid
+zig buid-exe
+zig build-exe
+zig build-exe .
 zig build
 ls
-nvim 26 build.zig
-nvim build.zig:26
-nvim build.zig
-nvim .tool-versions 
-asdf plugin list zls 
-asdf list all zls
-asdf install zls latest
-nvim .tool-versions 
-zig version
-nvim .tool-versions 
-zig version
-zls version
-nvim src/main.zig 
+cd zig-out/lib/
 ls
-zig run 
-nvim src/main.zig 
-zig run src/main.zig 
-apt show libcurl4 
-tldr find
-find . 'libcurl'
-find /usr/share/ 'libcurl'
-find /usr/lib64/ 'libcurl'
-find /usr/lib/ 'libcurl'
-find /usr/lib/x86_64-linux-gnu/ 'libcurl'
-exit
+cd ..
 ls
-gitg ls
-cd code/phoenix/
+cd ..
 ls
-cd kv
-mix test
-systemctl hibernate 
+cd zig-out/lib/
+ls
+cd ..
+ls
+ls -al
+cd ..
 ls
 cd 
+cd org/
 ls
+git status
+git add notes.org 
+git commit -m"Some notes" 
+git push
+jj 
+jj git init
+jj git log
+jj git 
+jj git remote
+jj git remote list
+jj log
+emacsclient zig-book.org
+emacs --server &
+emacsclient zine.org
+cd /opt
+ls
+cd f-secure/linuxsecurity/systemd/
+ls
+cat f-secure-linuxsecurity-statusd.service 
+cd ..
+ls
+cd 
 systemctl hibernate 
+cd code/zig/
+ls
+mkdir base64
+cd base64/
+ls
+zig init 
+nvim src/main.zig 
+zig build run 
+nvim src/main.zig 
+zig build run 
+ls
+nvim src/main.zig 
+zig build run 
+nvim src/main.zig 
+zig build run
+nvim src/main.zig 
+zig build run
+nvim src/main.zig 
+zig build run
+nvim src/main.zig 
+zig build run
+nvim src/main.zig 
+zig build run
+zig build
+zig build src/main.zig 
+zig build -h
+zig build run 
+zig run 
+zig run src/main.zig 
+zig build run 
+nvim src/main.zig 
+zig build run 
+nvim src/main.zig 
+zig build run 
+nvim src/main.zig 
+zig build run 
+nvim src/main.zig 
+zig build run 
+ls
+cd ..
+mkdir add_program
+cd add_program/
+zig init
+nvim src/main.zig 
+zig build-exe 
+zig build-exe src/main.zig 
+nvim src/main.zig 
+cd ..
+cd 
+cd code/zig/
+ls
+mkdir zine
+cd zine
+mv ~/Downloads/x86_64-linux-musl.tar.xz .
+tar xvf x86_64-linux-musl.tar.xz 
+ls
+./zine 
+ls
+rm x86_64-linux-musl.tar.xz 
+cp zine ~/.local/bin/
+ls
+zine
+mkdir example.com
+cd example.com/
+zine init
+ls
+tree
+zine release
+ls
+zine
+asdf list
+cd .config/fish/
+ls
+cd fish_variables/
+ls
+ls -al 
+cd ..
+ls -al 
+rmdir fish_variables/
+touch fish_variables
+fish 
 exit
-tree .
-zig test
-zig test .
+cd 
+cd code/tools/
+ls
+git clone https://github.com/nektro/zigmod
+cd zigmod/
+ls
+zig build -j1
+ls
 zig build 
-cd /opt/
+zig run
+./zig-out/bin/zigmod 
+./zig-out/bin/zigmod version
+./zig-out/bin/zigmod help
+./zig-out/bin/zigmod zpm
+./zig-out/bin/zigmod zpm search bio
+cd 
+cd code/zig/zine/
 ls
-cd f-secure/
+cd clean.com/
+zine 
+cd ..
 ls
-cd linuxsecurity/
+zine 
+cd lfi-villejuif.fr/
+zine
+ls 
+ls -al 
+ulimit -a 
+cat /proc/sys/kernel/core_pattern
+ls 
+cd content/
 ls
-globalprotect 
-ps aux | grep sec
-ps aux | grep glpi
-cd bin/
+nvim about.smd 
+nvim fr-FR/apropos.smd 
 ls
-lspci
-lspci --help
-systemctl status mariadb
-systemctl status apache2
-sudo mysql -u root -p
+cd ..
+ls
+cd content/devlog/
+ls
+cat 1989.smd 
+ls
+cat index.smd 
+cd ..
+ls
+mv devlog/ en-US/
+ls
+zine serve &
+zine &
+c d
+cd 
+cd /tmp/
+ls
+ls -al 
+cd ../lost+found/
+sudo su 
+cd 
+cd .local/bin/
+ls
+ls -al 
+coredumpctl 
+coredumpctl list zine
+ls
+coredumpctl list zine
+apropos backtrace 
+sysctl
+man sysctl
+sudo sysctl -a core
+man sysctl
+sudo sysctl -p core
+sudo sysctl core
+coredumpctl info
+cp /var/lib/systemd/coredump/core.zine.1000.f4b16e2d4b6d42b1a49c098ad11476f5.37564.1762870428000000.zst ~/code/zig/
+cd 
+cd code/zig/
+ls
+cd zine/
+ls
+cd lfi-villejuif.fr/
+ls
+cd content/en-US/
+ls
+nvim about.smd 
+zine 
+ls
+zind
+zine
+cd 
+cd -
+cd ..
+cd clean-install.com/
+ls
+zine 
+ps aux | grep zine
+killall zine 
+ps aux | grep zine
 exit
+zine init
+git init
+git lfs activate
+git lfs init
+jj git init
+ls
+cd layouts/
+ls
+zine init
+zine
+echo $TERM
+man x-terminal-emulator 
+echo `x-terminal-emulator`
+asdf --version
+asdf update 
+cargo install broot & 
+broot
+br
+cargo --list 
+asdf reshim rust 
+broot 
+exit
+ls
+sudo shutdown
+sudo shutdown -h now
+ls
+ll 
+du -h .
+lsm
+ls*
+cd code/zig/
+ls
+cd introduction/
+ls
+cd zig-out/
+ls
+fish 
+exit
+ls
+nvim isogram.zig 
+. ~/.bashrc 
+nvim isogram.zig 
+ls
+cat test_isogram.zig 
+clear
+ls
+zig test
+nvim HELP.md 
+zig test test_isogram.zig 
+clear
+zig test test_isogram.zig 
+clear
+zig test test_isogram.zig 
+clear
+zig test test_isogram.zig 
+exit
+fish
+exit
+systemctl sleep
+systemctl suspend
+cd code/
+ls
+cd web/
+ls
+cd villejuif-insoumise/
+fish
+ls
+nvim README.md 
+asdf reshim neovim 
+asdf
+source ~/.bashrc 
+asdf reshim neovim 
+nvim ~/.config/tmux/config 
+ls
+nvim README.md 
+nvim isogram.zig 
+zig test test_isogram.zig 
+nvim isogram.zig 
+cd
+cd .ssh/
+ls
+rm known_hosts
+ssh-keygen 
+tldr ssh-keygen 
+ssh-keygen -t ed25519 -a 32 -f ~/.ssh/codeberg -C "comment|sacha@muszlak.com"
+ls
+xclip codeberg.pub
+cat codeberg.pub | xclip
+cat codeberg.pub
+echo -n '9880c66b84123946ce2d79aef54f24d123f418fc41a86323424cfbec683c0576' | ssh-keygen -Y sign -n gitea -f ~/.ssh/codeberg
+echo -n '067bfa3ff089f9153a7c28b069e00100b1104cc4c4927239775efe0ff203c368' | ssh-keygen -Y sign -n gitea -f ~/.ssh/id_ed25519 # or the path to the private key if it is different.
+echo -n '067bfa3ff089f9153a7c28b069e00100b1104cc4c4927239775efe0ff203c368' | ssh-keygen -Y sign -n gitea -f ~/.ssh/codeberg
+bash -c "echo -n 'c73d293da24ea6e3781e85cf52486bf5a3a220c3e9d48955e72db769a35cbf08' | ssh-keygen -Y sign -n gitea -f <(echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHhRpvbeqQKckFQ/xdhIMkx4YBOuSq8hJH+zuzfAm6bT')"
+exit
+fish
+exit
+git branch ex2
+fish 
+exit
+cd 
+cd code/webtest/web-phoenix/
+ls
+git push 
+git status
+git push codeberg 
+ssh-add ~/.ssh/codeberg
+git push codeberg 
+ssh -T git@codeberg.com
+ssh -T git@codeberg.org
+git push codeberg 
+cd ~/.ssh/
+l;s
+ls
+exit
+zig build
+fish 
+ssh-keygen -t ed25519 -o -a 100 -C codeberg -f ~/.ssh/codeberg
+cat ~/.ssh/codeberg.pub 
+eval `ssh-agent`
+ssh-add -l
+ssh-add ~/.ssh/codeberg
+ssh-add ~/.ssh/github
+ssh-add ~/.ssh/forge
+ssh-add -l
+git push 
+ssh -T git@codeberg.org
+git push codeberg
+git config --global -list
+git config --global --list
+git config user.name "samusz"
+git config user.email "sacha@muszlak.com"
+git push codeberg main 
+git status
+git push
+sudo apt install -y wget apt-transport-https
+‍
+sudo wget -O /usr/share/keyrings/element-io-archive-keyring.gpg https://packages.element.io/debian/element-io-archive-keyring.gpg
+‍
+echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https://packages.element.io/debian/ default main" | sudo tee /etc/apt/sources.list.d/element-io.list
+sudo apt update
+sudo apt install element-desktop
+curl wsap.sh
+curl ysap.sh
+curl recherche.data.gouv.fr
+cd ..
+curl entrepot.recherche.data.gouv.fr
+gkt
+cd //
+cd /
+cd -
+pwd
+cd 
+cd ~
+cd code/webtest/
+ls
+git clone git@github.com/bahamas10/ysap.git
+git clone https://github.com/bahamas10/ysap.git
+cd ysap/
+ls
+cd website/
+ls
+ls -al 
+file check-deps 
+nvim check-deps 
+./
+ls
+nvim README.md 
+julia 
+julia --version 
+asdf list all julia 
+julia --version 
+asdf install julia 1.12.1
+fish 
+cd Downloads/
+ls
+ls -lrt 
+sudo dpkg -i google-chrome-stable_current_amd64.deb 
+cd 
+cd code/zig/
+ls
+git clone https://codeberg.org/ziglings/exercises.git
+rm -rf exercises/
+git clone https://codeberg.org/samusz/exercises.git
+git status
+mkdir ziglings 
+mv exercises/ ziglings/
+cd ziglings/
+ls
+cd exercises/
+git status
+jj git init 
+git branch ex1
+fishy 
+fish
+nvim ~/.config/fish/config.fish 
+cd code/work/issuesautomation/
+git status 
+git rebase --continue
+nvim README.md 
+git checkout 29-ajout-du-badge-de-pipeline-dans-le-readme 
+nvim README.md 
+git pull
+nvim README.md 
+exit
+go --version
+go version
+asdf install go latest
+asdf plugin add go 
+asdf plugin add golang
+asdf in
+asdf plugin add golang
+asdf install golang latest
+fish 
